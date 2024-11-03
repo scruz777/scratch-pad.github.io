@@ -19,7 +19,9 @@
 
 
 function print(value) {
-  // YOUR CODE BELOW HERE //
+  // YOUR CODE BELOW HERE use console.log function to print to console
+  console.log(value);
+  
   
 
   
