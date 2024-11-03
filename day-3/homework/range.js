@@ -24,7 +24,25 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
+    function range(start, end) {
+    // Create a storage array to collect the output
+    var storage = [];
     
+    // If start is less than or equal to end, count up
+    if (start <= end) {
+        for (var i = start; i <= end; i++) {
+            storage.push(i);
+        }
+    } 
+    // If start is greater than end, count down
+    else {
+        for (var i = start; i >= end; i--) {
+            storage.push(i);
+        }
+    }
+    
+    return storage;
+}
     
     
     // YOUR CODE GOES ABOVE HERE //
