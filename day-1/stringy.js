@@ -17,8 +17,8 @@
 
 
 function length(string) {
-    // YOUR CODE BELOW HERE //
-
+    // YOUR CODE BELOW HERE use string.length to return the length of the string
+    return string.length;
    
     
     // YOUR CODE ABOVE HERE //
@@ -28,8 +28,8 @@ function length(string) {
  * Given an input String, return a new String forced to lowercase.
  */
 function toLowerCase(string) {
-    // YOUR CODE BELOW HERE //
-   
+    // YOUR CODE BELOW HERE using .toLowerCase() method to convert all letters from upper case to lower case 
+    return string.toLowerCase(); 
 
     // YOUR CODE ABOVE HERE //
 }
@@ -38,7 +38,8 @@ function toLowerCase(string) {
  * Given an input String, return a new String forced to uppercase.
  */
 function toUpperCase(string) {
-    // YOUR CODE BELOW HERE //
+    // YOUR CODE BELOW HERE // use the .toUpperCase method to convert all upercase letters to lowercase 
+    return string.toUpperCase
 
 
 
@@ -59,8 +60,8 @@ function toUpperCase(string) {
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
 function toDashCase(string) {
-    // YOUR CODE BELOW HERE //
-
+    // YOUR CODE BELOW HERE using .toLowerCase() method as well as .replace() method, using expressions to find find spaces and globally convert them to dashes
+    return string.toLowerCase().replace(/\s+/g, '-');
 
 
     // YOUR CODE ABOVE HERE //
@@ -79,8 +80,8 @@ function toDashCase(string) {
  *      ensure uppercase and lowercase can be compared equally?
  */
 function beginsWith(string, char) {
-    // YOUR CODE BELOW HERE //
-
+    // YOUR CODE BELOW HERE utilize .toLowerCase() to change all letters to lowercase for case insensitivity sake, use indeces to access beginning letter of string
+     return string[0].toLowerCase() === char.toLowerCase();
     
 
     // YOUR CODE ABOVE HERE //
@@ -99,8 +100,8 @@ function beginsWith(string, char) {
  *      ensure uppercase and lowercase can be compared equally?
  */
 function endsWith(string, char) {
-    // YOUR CODE BELOW HERE //
-
+    // YOUR CODE BELOW HERE utilize .legnth - 1 to access the end letter of the string, utilize .toLowerCase() to make all letters lowercase
+    return string[string.length - 1].toLowerCase() === char.toLowerCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -112,7 +113,8 @@ function endsWith(string, char) {
  * TIP: What's the operator to concatenate two Strings?
  */
 function concat(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
+    // YOUR CODE BELOW HERE use the concat function to return two concatenated strings using the + operator
+    return stringOne + stringTwo 
 
 
 
@@ -132,7 +134,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    return args.join('');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -147,8 +149,8 @@ function join(stringOne, stringTwo) {
  * TIP: What property of the String do we need to compare?
  */
 function longest(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
-
+    // YOUR CODE BELOW HERE use the ? operator to determine which string is longer than the other, use .length to determine the lenght of the strings
+     return stringOne.length >= stringTwo.length ? stringOne : stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -162,8 +164,8 @@ function longest(stringOne, stringTwo) {
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 function sortAscending(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
-
+    // YOUR CODE BELOW HERE use .localeCompare() method to which compares to strings alphabetically by returning a number indicating their order
+     return stringOne.localeCompare(stringTwo);
 
 
     // YOUR CODE ABOVE HERE //
@@ -178,8 +180,17 @@ function sortAscending(stringOne, stringTwo) {
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 function sortDescending(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
+    // YOUR CODE BELOW HERE using .localeCompare() method and reversing the result using if/else statements to determine descending alphabetical order of two strings
+       const comparison = stringOne.localeCompare(stringTwo);
 
+    // Reverse the result for descending order
+    if (comparison < 0) {
+        return 1;
+    } else if (comparison > 0) {
+        return -1;
+    } else {
+        return 0;
+    }
 
 
 
