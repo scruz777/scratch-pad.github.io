@@ -17,10 +17,10 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     // determine if the value is an array using Array.isArray() method
-    return Array.isArray(value);
-}
+    return Object.prototype.toString.call(value) === '[object Array]';
+};
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 
@@ -42,9 +42,9 @@ function isObject(value) {
            value !== null && 
            !Array.isArray(value) && 
            !(value instanceof Date);
-}
+};
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 

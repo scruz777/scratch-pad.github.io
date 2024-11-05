@@ -50,13 +50,14 @@ function printObjectKeys(object) {
     console.log(key);
  // YOUR CODE ABOVE HERE //
 }
+};
 
 /** 
  * Given an input Object, return an Array containing the Object's values.
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE use object.values(object) method to return an array of the values of the obj properties
-  return object.values(object);
+  return Object.values(object);
   // YOUR CODE ABOVE HERE //
 }
 
