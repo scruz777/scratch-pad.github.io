@@ -12,13 +12,12 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE using for loop to loop forward over the array and print its values using console.log().
-  function printArrayValues(array) {
-  // YOUR CODE BELOW HERE //
-  for (let i = 0; i < array.length; i++) {
+ 
+  // Use a for loop to loop over the array and print each value
+  for (var i = 0; i < array.length; i++) {
     console.log(array[i]);
   }
-  // YOUR CODE ABOVE HERE //
-}
+};
 
 /** 
  * Given an input Array, loop backwards over the Array and print its values 
@@ -30,7 +29,7 @@ function printArrayValuesInReverse(array) {
     console.log(array[i]); // Print each element
   // YOUR CODE ABOVE HERE //
 }
-
+};
 /** 
  * Given an input Object, return an Array containing the Object keys.
  */

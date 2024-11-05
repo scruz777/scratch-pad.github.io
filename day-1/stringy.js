@@ -39,7 +39,7 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE // use the .toUpperCase method to convert all upercase letters to lowercase 
-    return string.toUpperCase
+    return string.toUpperCase();
 
 
 
@@ -165,11 +165,21 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE use .localeCompare() method to which compares to strings alphabetically by returning a number indicating their order
-     return stringOne.localeCompare(stringTwo);
+
+        var comparison = stringOne.localeCompare(stringTwo);
+        if (comparison > 0) {
+            return -1;
+        } else if (comparison < 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    };
+
 
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 /**
@@ -181,21 +191,20 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE using .localeCompare() method and reversing the result using if/else statements to determine descending alphabetical order of two strings
-       const comparison = stringOne.localeCompare(stringTwo);
+    const comparison = stringOne.localeCompare(stringTwo);
 
-    // Reverse the result for descending order
+    // Reverse the comparison result for descending order
     if (comparison < 0) {
-        return 1;
+        return -1;  // stringOne is alphabetically before stringTwo, so return -1 for descending order
     } else if (comparison > 0) {
-        return -1;
+        return 1;   // stringOne is alphabetically after stringTwo, so return 1 for descending order
     } else {
-        return 0;
+        return 0;   // strings are equal
     }
-
-
+}
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

@@ -20,18 +20,21 @@
  */
 
 function reverseString(input) {
-    // YOUR CODE GOES BELOW HERE //
-    //creating var storageString to store reversed string 
+  
+    // Creating var storageString to store reversed string
     var storageString = '';
-    //use for loop to access individual elements of string to be reversed
+    
+    // Use for loop to access individual elements of string to be reversed
     for (let i = input.length - 1; i >= 0; i--) {
-    reversed += input[i];    
+      storageString += input[i];
     }
+    
     return storageString;
+  }
     
     
     // YOUR CODE GOES ABOVE HERE //
-}
+;
 
 
 
