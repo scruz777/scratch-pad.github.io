@@ -56,7 +56,13 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-
+    return (
+        Array.isArray(value) ||
+        (value !== null &&
+          typeof value === 'object' &&
+          value.constructor === Object)
+      );
+      };
 
     // YOUR CODE ABOVE HERE //
 
