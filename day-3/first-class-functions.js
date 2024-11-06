@@ -18,7 +18,7 @@ function createGreaterThanFilter(base) { //takes on one param of base
     };
     
    // YOUR CODE ABOVE HERE //
-}
+};
 
 /** 
  * Given an input base to test against, which could be a String or Number, 
