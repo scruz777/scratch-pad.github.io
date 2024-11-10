@@ -24,29 +24,26 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
-    function range(start, end) {
-    // Create a storage array to collect the output
-    var storage = [];
+        const result = []; // Initialize an empty array to store the range
     
-    // If start is less than or equal to end, count up
-    if (start <= end) {
-        for (var i = start; i <= end; i++) {
-            storage.push(i);
+        if (start <= end) {
+            // If start is less than or equal to end, count up
+            for (let i = start; i <= end; i++) {
+                result.push(i); // Add each number to the array
+            }
+        } else {
+            // If start is greater than end, count down
+            for (let i = start; i >= end; i--) {
+                result.push(i); // Add each number to the array
+            }
         }
-    } 
-    // If start is greater than end, count down
-    else {
-        for (var i = start; i >= end; i--) {
-            storage.push(i);
-        }
-    }
     
-    return storage;
-}
+        return result; // Return the filled array
+    };
     
     
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 

@@ -45,7 +45,7 @@ function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE convert startsWith to lowercase for case insenstivity sake using .toLowerCase() method
     var char = startsWith.toLowerCase();
     // Return a function that accepts a string and checks if it starts with var char
-    return function(string {
+    return function(string) {
      // Convert the first character of the input string to lowercase and compare
     return string[0].toLowerCase() === char;
     };
@@ -61,18 +61,17 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    var x = endsWith.toLowerCae();
-    //return a func which takes a string and checks if it ends with specified character
-     return function (string) {
+    var x = endsWith.toLowerCase();
+    // return a function that takes a string and checks if it ends with specified character
+    return function (string) {
         // Convert the last character of the string to lowercase
         var char = string.slice(-1).toLowerCase();
         // Check if the last character matches the specified endsWith character
         return char === x;
     };
-    
-    
+} 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an Array of Strings and a Function designed to modify a String, 
@@ -96,7 +95,7 @@ function modifyStrings(strings, modify) {
     return storage;
 }
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 
@@ -129,7 +128,7 @@ function allStringsPass(strings, test) {
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 
