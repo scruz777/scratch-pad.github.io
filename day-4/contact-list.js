@@ -35,14 +35,52 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    };
+}
+
+
+function makeContactList() {
+    // The contacts array will store all contact objects
+    let contacts = [];
     
+    return {
+        // 1. length() returns the number of contacts in the list
+        length: function() {
+            return contacts.length;
+        },
+        
+        // 2. addContact(contact) adds a contact to the list
+        addContact: function(contact) {
+            contacts.push(contact);
+        },
+        
+        // 3. findContact(fullName) finds a contact by full name
+        findContact: function(fullName) {
+            return contacts.find(contact => 
+                `${contact.nameFirst} ${contact.nameLast}` === fullName
+            );
+        },
+        
+        // 4. removeContact(contact) removes a contact from the list
+        removeContact: function(contact) {
+            const index = contacts.indexOf(contact);
+            if (index !== -1) {
+                contacts.splice(index, 1);
+            }
+        },
+        
+        // 5. printAllContactNames() returns all names in the list, separated by line breaks
+        printAllContactNames: function() {
+            return contacts
+                .map(contact => `${contact.nameFirst} ${contact.nameLast}`)
+                .join('\n');
+        }
+    };
 } 
-
-
-
-function makeContactList() {}
-    
-       
 
 
 // YOUR CODE GOES ABOVE HERE //
